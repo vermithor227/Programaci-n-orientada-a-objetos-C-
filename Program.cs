@@ -1,17 +1,11 @@
-﻿
+﻿// * ENTORNO Y MAPA MENTAL:
+
 // Practica guiada #1 (Tu primer objeto)
 var m = new Mascota("Misu", 3);
 m.Presentarce();
 
 // Reto #1 (Un metodo que devuelve valor)
 Console.WriteLine(new Saludo().Decir("Sebastian"));
-
-// Practica guiada "2 (La clase Libro con dos constructores)
-var l1 = new Libro("Cien años de soledad", "García Márquez");
-var l2 = new Libro("El coronel no tiene quien le escriba");
-l1.Prestar();
-Console.WriteLine(l1.Descripcion());
-Console.WriteLine(l2.Descripcion());
 
 // (Ejemplo de 3 constructores trabajado en clase)
 
@@ -29,6 +23,35 @@ Console.WriteLine(e1.presentar());
 Console.WriteLine(e2.presentar());
 Console.WriteLine(e3.presentar());
 
+
+
+// * CLASES Y OBJETOS:
+
+// Practica guiada #2 (La clase Libro con dos constructores)
+var l1 = new Libro("Cien años de soledad", "García Márquez");
+var l2 = new Libro("El coronel no tiene quien le escriba");
+l1.Prestar();
+Console.WriteLine(l1.Descripcion());
+Console.WriteLine(l2.Descripcion());
+
 // Reto #2 (Rectángulo)
+var r = new Rectangulo(3, 4);
+Console.WriteLine(r.Area());       // 12
+Console.WriteLine(r.Perimetro());  // 14
 
 // Reto #3 (Copiar un objeto, no la referencia)
+var a = new Punto(1, 2);
+var b = a;
+var c = a.Clonar();
+a.X = 99;
+Console.WriteLine($"{b.X} {c.X}");   // 99 1
+
+
+
+// * ENCAPSULAMIENTO Y PROPIEDADES:
+
+// Practica guiada #3 (Cuenta bancaria protegida)
+
+// Reto #4 (Temperatura con rango válido)
+
+// Reto #5 (Objeto inmutable con required e init)
