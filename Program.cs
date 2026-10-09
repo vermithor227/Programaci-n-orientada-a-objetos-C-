@@ -51,7 +51,36 @@ Console.WriteLine($"{b.X} {c.X}");   // 99 1
 // * ENCAPSULAMIENTO Y PROPIEDADES:
 
 // Practica guiada #3 (Cuenta bancaria protegida)
+var cuenta = new CuentaBancaria { Titular = "  Laura Gómez  " };
+cuenta.Depositar(500_000m);
+bool ok = cuenta.Retirar(700_000m);
+Console.WriteLine($"{cuenta.Titular}|{cuenta.Saldo}|{ok}");
+cuenta.Retirar(200_000m);
+Console.WriteLine(cuenta.Saldo);
 
 // Reto #4 (Temperatura con rango válido)
+var t = new Temperatura { Celsius = 100 };
+Console.WriteLine(t.Fahrenheit);   // 212
 
 // Reto #5 (Objeto inmutable con required e init)
+var u = new Usuario { Email = "a@b.co" };
+Console.WriteLine($"{u.Email} {u.Rol}");   // a@b.co invitado
+
+
+
+// * HERENCIA:
+
+// Practica guiada #4 (Jerarquía de vehículos)
+
+// Reto #6 (Clase sellada)
+
+// reto #7 (Constructor con base(...) explícito)
+
+// (Ejemplo de Aprendices)
+
+Persona persona = new Persona("Yared", "Acosta", "3314619");
+Aprendiz aprendiz = new Aprendiz("Sebastián", "Lamprea", "3341691",
+                                 "3314619", "Análisis y Desarrollo de Software");
+
+Console.WriteLine(persona.Presentarse());
+Console.WriteLine(aprendiz.Presentarse());
